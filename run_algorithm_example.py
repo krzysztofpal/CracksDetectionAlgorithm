@@ -10,6 +10,4 @@ if __name__ == "__main__":
 
     result = compute(img, width=256, size_limit=8, output_plots_path=demo_path)
 
-    a = 5
-
 
