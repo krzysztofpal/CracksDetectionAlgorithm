@@ -1,5 +1,5 @@
-# FracturesDetectionAlgorithm
-This repository contains code for fracture detection. This program is described in detail in the paper titled: "An image processing approach for fatigue crack identification in cellulose acetate replicas"
+# CracksDetectionAlgorithm
+This repository contains code for cracks detection. This program is described in detail in the paper titled: "An image processing approach for fatigue crack identification in cellulose acetate replicas"
 
 # Environment installation
 
@@ -11,13 +11,13 @@ After *conda* installation the new *conda environment* must be created. To do so
 conda env create -f environment.yml
 ```
 
-This line of code creates *conda environment* called *fractures* with all required libraries to run the algorithm. Next, you have to activate this environment by running the command:
+This line of code creates *conda environment* called *cracks* with all required libraries to run the algorithm. Next, you have to activate this environment by running the command:
 
 ```
-conda activate fractures
+conda activate cracks
 ```
 
-At this point you have installed and activated the *fractures* environment. You can now proceed to run the algorithm.
+At this point you have installed and activated the *cracks* environment. You can now proceed to run the algorithm.
 
 # Algorithm
 
@@ -25,7 +25,7 @@ The algorithm is stored in *algorithm.py* file. To use the algorithm, call funct
 
 - img: this is image object from opencv library
 - width: the width of the reduced image used for computations. In order to reduce amount of comuptations the algorithm shrinks input image to the specified width, performs computations, and restores original width. The smaller the *width*, the quicker the computations happend, but the algorithm is less precise. We recommend using it with value equal to **256**
-- size_limit: the minimal amount of pixels on the reduced image required for forming a fracture. This parameter governs filtering of noise through setting a threshold. We recommend using it with value equal to **8**
+- size_limit: the minimal amount of pixels on the reduced image required for forming a crack. This parameter governs filtering of noise through setting a threshold. We recommend using it with value equal to **8**
 - output_plots_path: this parameter contains the path to folder, where computation results visualizations are saved. If the value is **None**, then visualizations will not be generated.
 
 # Running the example
